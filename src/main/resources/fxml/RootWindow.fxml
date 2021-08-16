@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kozyrev.Controller.RootWindowController">
+   <top>
+      <MenuBar prefHeight="21.0" prefWidth="905.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Журнал посещений">
+            <items>
+                  <Menu mnemonicParsing="false" text="показать">
+                    <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showAllJournal" text="весь журнал" />
+                        <MenuItem mnemonicParsing="false" onAction="#showByDate" text="по дате" />
+                        <MenuItem mnemonicParsing="false" onAction="#showByTime" text="по времени" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="поиск по...">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#searchByEmployee" text="по сотруднику" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Показать сотрудников">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showAllEmployee" text="все сотрудники" />
+                  <MenuItem mnemonicParsing="false" onAction="#showBySubdivision" text="по подразделению" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Черный список">
+               <items>
+              <MenuItem mnemonicParsing="false" onAction="#showBlackList" text="весь список " />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Посещаемость">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showGraph" text="показать посещаемость" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

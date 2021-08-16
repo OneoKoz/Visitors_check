@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="319.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kozyrev.Controller.EditVisitorWindowController">
+   <children>
+      <GridPane layoutX="25.0" layoutY="17.0" prefHeight="122.0" prefWidth="401.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="17.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="84.99305725097656" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.4173812866211" minWidth="10.0" prefWidth="316.50694274902344" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="49.0" minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="119.0" text="Фамилия" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Имя" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Отчество" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Паспорт" GridPane.rowIndex="3" />
+            <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="patronymicTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="pasportDateTextField" prefHeight="27.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox layoutX="258.0" layoutY="274.0" prefHeight="37.0" prefWidth="168.0" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onOKVisitor" prefHeight="35.0" prefWidth="80.0" text="ОК" />
+            <Button mnemonicParsing="false" onAction="#OnCancelVisitor" prefHeight="35.0" prefWidth="80.0" text="Отмена" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" layoutX="24.0" layoutY="257.0" prefHeight="17.0" prefWidth="347.0" text="данные не должны включать &quot;|&quot;" textFill="#cc1616" visible="false" />
+      <GridPane fx:id="infoEmployeeGridPane" layoutX="25.0" layoutY="139.0" prefHeight="116.0" prefWidth="401.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="139.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="84.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="317.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="infoEmployee" prefHeight="17.0" prefWidth="119.0" text="Данные Сотрудника" GridPane.columnIndex="1" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Фамилия" GridPane.rowIndex="1" />
+            <TextField fx:id="lastNameEmployeeTextField" prefHeight="27.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Имя" GridPane.rowIndex="2" />
+            <TextField fx:id="firstNameEmployeeTextField" prefHeight="27.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="119.0" text="Отчество" GridPane.rowIndex="3" />
+            <TextField fx:id="patronymicEmployeeTextField" prefHeight="27.0" prefWidth="173.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

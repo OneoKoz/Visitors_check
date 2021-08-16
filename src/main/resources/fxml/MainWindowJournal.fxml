@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="130.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kozyrev.Controller.MainWindowJournalController">
+   <children>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" layoutY="83.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="83.0">
+         <content>
+            <VBox fx:id="employeeVBox" prefHeight="40.0" prefWidth="344.0" />
+         </content></ScrollPane>
+      <Button fx:id="buttonNEWVisitor" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#addNewVisitor" prefHeight="35.0" prefWidth="173.0" text="ДОБАВИТЬ ПОСЕТИТЕЛЯ" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="11.0" />
+      <DatePicker fx:id="datePicker" layoutX="14.0" layoutY="15.0" onAction="#onDatePicker" prefHeight="27.0" prefWidth="205.0" visible="false" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0" />
+      <HBox fx:id="timeHBox" layoutX="15.0" layoutY="48.0" prefHeight="28.0" prefWidth="150.0" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <TextField fx:id="hourStartTextField" prefHeight="10.0" prefWidth="32.0" />
+            <Label prefHeight="27.0" prefWidth="4.0" text=":" />
+            <TextField fx:id="minuteStartTextField" prefHeight="10.0" prefWidth="32.0" />
+            <Label prefHeight="27.0" prefWidth="12.0" text="--" />
+            <TextField fx:id="hourEndTextField" prefHeight="10.0" prefWidth="32.0" />
+            <Label prefHeight="27.0" prefWidth="4.0" text=":" />
+            <TextField fx:id="minuteEndTextField" prefHeight="10.0" prefWidth="32.0" />
+         </children>
+      </HBox>
+      <ChoiceBox fx:id="subdivisionChoiceBox" layoutX="15.0" layoutY="14.0" prefHeight="27.0" prefWidth="174.0" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0" />
+      <HBox fx:id="searchHBox" layoutX="13.0" layoutY="15.0" prefHeight="29.0" prefWidth="231.0" visible="false" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <TextField fx:id="searchTextField" prefHeight="27.0" prefWidth="174.0" />
+            <Button mnemonicParsing="false" onAction="#onSearchByEmployee" text="найти" />
+         </children>
+      </HBox>
+      <Button fx:id="buttonAddBlack" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAddInBlackList" prefHeight="35.0" prefWidth="173.0" text="ДОБАВИТЬ " visible="false" />
+      <Button fx:id="buttonNEWEmplyoeee" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAddNewEmployee" prefHeight="35.0" prefWidth="180.0" text="ДОБАВИТЬ СОТРУДНИКА" visible="false" />
+      <Label fx:id="errorLabel" layoutX="255.0" layoutY="57.0" prefHeight="17.0" prefWidth="534.0" textFill="#dd2828" />
+      <ChoiceBox fx:id="morelessChoiceBox" layoutX="255.0" layoutY="15.0" prefHeight="27.0" prefWidth="109.0" visible="false" />
+      <Button fx:id="buttonShowByTime" layoutX="255.0" layoutY="12.0" mnemonicParsing="false" onAction="#onTime" prefHeight="35.0" prefWidth="85.0" text="показать" visible="false" />
+      <Button fx:id="buttonRemoveBlack" layoutX="337.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRemoveFromBlack" prefHeight="33.0" prefWidth="179.0" text="Удалить из черного списка" visible="false" />
+      <Button fx:id="buttonAddNewSubdivision" layoutX="700.0" layoutY="11.0" mnemonicParsing="false" onAction="#addNewSubdivision" prefHeight="35.0" prefWidth="173.0" text="добавить новый отдел" visible="false" />
+      <Button fx:id="buttonRemoveSubdivision" layoutX="510.0" layoutY="11.0" mnemonicParsing="false" onAction="#removeSubdivision" prefHeight="35.0" prefWidth="173.0" text="удалить отдел " visible="false" />
+      <Button fx:id="saveButton" layoutX="415.0" layoutY="16.0" mnemonicParsing="false" onAction="#onSaveButton" prefHeight="27.0" prefWidth="109.0" text="сохранить" visible="false" />
+   </children>
+</AnchorPane>

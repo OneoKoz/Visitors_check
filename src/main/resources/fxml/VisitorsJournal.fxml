@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kozyrev.Controller.VisitorsJournalController">
+   <children>
+      <TableView fx:id="journalTableView" layoutX="3.0" layoutY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn minWidth="-1.0" prefWidth="433.0" text="ПОСЕТИТЕЛЬ">
+               <columns>
+                  <TableColumn fx:id="lastNameVisitorTableColumn" prefWidth="125.0" text="фамилия" />
+                  <TableColumn fx:id="firstNameVisitorTableColumn" prefWidth="90.0" text="имя" />
+                  <TableColumn fx:id="patronymicVisitorTableColumn" prefWidth="130.0" text="отчество" />
+                  <TableColumn fx:id="pasportDataTableColumn" prefWidth="108.0" text="паспорт" />
+               </columns>
+            </TableColumn>
+          <TableColumn fx:id="EmployeeColumn" minWidth="-1.0" prefWidth="428.0" text="СОТРУДНИК">
+               <columns>
+                  <TableColumn fx:id="lastNameEmployeeTableColumn" prefWidth="125.0" text="фамилия" />
+                  <TableColumn fx:id="firstNameEmployeeTableColumn" prefWidth="90.0" text="имя" />
+                  <TableColumn fx:id="patronymicEmployeeTableColumn" minWidth="4.374755859375" prefWidth="95.0" text="отчество" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="dateTableColumn" minWidth="0.0" prefWidth="82.0" text="ДАТА" />
+            <TableColumn fx:id="timeTableColumn" minWidth="0.0" prefWidth="50.0" text="ВРЕМЯ" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

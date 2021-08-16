@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="150.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kozyrev.Controller.EditSubdivisionWindowController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="79.0" prefWidth="446.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="145.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="301.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Название нового отдела" />
+            <Label text="Цвет" GridPane.rowIndex="1" />
+            <TextField fx:id="nameSubdivisionTextField" GridPane.columnIndex="1" />
+            <ColorPicker fx:id="colorSubdivision" prefHeight="27.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox layoutX="287.0" layoutY="96.0" prefHeight="40.0" prefWidth="149.0" spacing="5.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="287.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="96.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onOk" prefHeight="36.0" prefWidth="71.0" text="Ок" />
+            <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="36.0" prefWidth="71.0" text="Отмена" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" layoutX="5.0" layoutY="96.0" prefHeight="17.0" prefWidth="257.0" text="Введите название отдела" textFill="#d32727" visible="false" />
+   </children>
+</AnchorPane>
